@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JOB PLACEMENT PREDICTION </title>
+</head>
+
+
+<style>
+    body {
+      background-image: url("https://cscgjsp.in/custom/images/job_banner_1.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: cover;}
+    </style>
+
+<style>
+    h1 {text-align: center;}
+    h2 {text-align: center;}
+    form {text-align: center;}
+    label {text-align: center;}
+    </style>
+
+<body style="background-color: rgba(250, 10, 18, 0.175);">
+    <!-- <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"> -->
+    <h1 style="color:rgb(245, 29, 13);"><b> JOB PLACEMENT PREDICTION <b></h1>
+    <form method="POST" action="/job_predict">
+
+        <br>
+
+        <label style="color:rgb(0, 7, 0);">Gender:</label>
+        <select name = "gender">
+            <option value = "M">Male</option>
+            <option value = "F">Female</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label style="color:rgb(0, 7, 0);">SSC Precentage:</label>
+        <input type = "text" name = "ssc_percentage">
+        </select>
+
+        <br>
+        <br>
+
+        <label style="color:rgb(0, 7, 0);">SSC Board:</label>
+        <select name = "ssc_board">
+            <option value = "Central">Central</option>
+            <option value = "Others">Others</option>
+        </select>
+        <br>
+        <br>
+
+        <label style="color:rgb(0, 7, 0);">HSC Precentage:</label>
+        <input type = "text" name = "hsc_percentage">
+        </select>
+
+        <br>
+        <br>
+
+        <label style="color:rgb(0, 7, 0);">HSC Board:</label>
+        <select name = "hsc_board">
+            <option value = "Central">Central</option>
+            <option value = "Others">Others</option>
+        </select>
+        <br>
+        <br>
+
+        <label style="color:rgb(0, 7, 0);">HSC Subject :</label>
+        <select name = "hsc_subject">
+            <option value = "Arts">Arts</option>
+            <option value = "Commerce">Commerce</option>
+            <option value = "Science">Science</option>
+        </select>
+        <br>
+        <br>
+
+        <label style="color:rgb(0, 7, 0);">Degree Precentage :</label>
+        <input type = "text" name = "degree_percentage">
+        </select>
+
+        <br>
+        <br>
+
+        <label style="color:rgb(0, 7, 0);">Undergrad Degree:</label>
+        <select name = "undergrad_degree">
+            <option value = "Comm&Mgmt">Comm&Mgmt</option>
+            <option value = "Sci&Tech">Sci&Tech</option>
+            <option value = "Others">Others</option>
+        </select>
+        <br>
+        <br>
+
+        <label style="color:rgb(0, 7, 0);">Work Experience:</label>
+        <label style="color:rgb(0, 7, 0);">Yes:</label> <input type = "radio" name= "work_experience" value = "Yes">
+        <label style="color:rgb(0, 7, 0);">No:</label> <input type = "radio" name= "work_experience" value = "No">
+
+        <br>
+        <br>
+
+        <label style="color:rgb(0, 7, 0);">Employee Test Percentage :</label>
+        <input type = "text" name = "emp_test_percentage">
+        </select>
+
+        <br>
+        <br>
+
+        <label style="color:rgb(0, 7, 0);">Specialization :</label>
+        <select name = "specialisation">
+            <option value = "Mkt&Fin">Mkt&Fin</option>
+            <option value = "Mkt&HR">Mkt&HR</option>
+        </select>
+        <br>
+        <br>
+
+        <label style="color:rgb(0, 7, 0);">MBA Percentage :</label>
+        <input type = "text" name = "mba_percent">
+        </select>
+
+        <br>
+        <br>
+
+        <input type = "submit" value="SUBMIT">
+
+        <br>
+
+        <h2 style="color:rgb(5, 243, 5);"><strong><i> According to above detail Candidate is : <b> {{ prediction }} </b>  <i> </strong></h2>
+
+
+    </form>
+
+
+</body>
+</html>
